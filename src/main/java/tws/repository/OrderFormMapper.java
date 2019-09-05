@@ -19,8 +19,8 @@ public interface OrderFormMapper {
 	@Insert("insert into orderform (orderNumber,reciverName,reciverTel,weight) values (#{orderform.orderNumber},#{orderform.reciverName},#{orderform.reciverTel},#{orderform.weight})")
 	void insertOrderForm(@Param("orderform") OrderForm orderform);
 
-	@Select("select * from orderTable where status = #{status};")
-	List<OrderForm> selectAllByStatus(String status);
+//	@Select("select * from orderTable where status = #{status};")
+//	List<OrderForm> selectAllByStatus(@Param("status") String status);
 }
 
 

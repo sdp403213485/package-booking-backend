@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import tws.entity.Employee;
@@ -31,14 +32,14 @@ public class OrderFormController {
 		  orderFormMapper.insertOrderForm(orderform);
 		}
 
-	    @GetMapping("")
-	    public ResponseEntity<List<OrderForm>> getAllOrderTableByStatus(@RequestBody String status) {
+//	    @GetMapping("/status")
+//	    public ResponseEntity<List<OrderForm>> getAllOrderTableByStatus(@RequestBody String status) {
 //	        String status = map.get("status");
 //	        if(status == null || "".equals(status)){
 //	            status = "";
 //	        }
-	    	return ResponseEntity.ok(orderFormMapper.selectAllByStatus(status));
+//	    	return ResponseEntity.ok(orderFormMapper.selectAllByStatus(status));
 //	        List<OrderForm> list = orderFormMapper.selectAllByStatus(status);
 //	        return ResponseEntity.ok(list);
-	    }
+//	    }
 }
