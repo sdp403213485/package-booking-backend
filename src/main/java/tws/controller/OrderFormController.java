@@ -19,6 +19,8 @@ import tws.entity.Employee;
 import tws.entity.OrderForm;
 import tws.repository.OrderFormMapper;
 
+
+@CrossOrigin
 @RestController
 @RequestMapping("/")
 public class OrderFormController {
