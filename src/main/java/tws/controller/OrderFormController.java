@@ -1,6 +1,7 @@
 package tws.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -30,4 +31,14 @@ public class OrderFormController {
 		  orderFormMapper.insertOrderForm(orderform);
 		}
 
+	    @GetMapping("")
+	    public ResponseEntity<List<OrderForm>> getAllOrderTableByStatus(@RequestBody String status) {
+//	        String status = map.get("status");
+//	        if(status == null || "".equals(status)){
+//	            status = "";
+//	        }
+	    	return ResponseEntity.ok(orderFormMapper.selectAllByStatus(status));
+//	        List<OrderForm> list = orderFormMapper.selectAllByStatus(status);
+//	        return ResponseEntity.ok(list);
+	    }
 }
